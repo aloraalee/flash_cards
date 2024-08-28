@@ -1,6 +1,6 @@
 class Deck
     attr_reader :cards
-     attr_accessor :card
+    #  attr_accessor :card
 
     def initialize(cards)
         @cards = cards
@@ -11,15 +11,11 @@ class Deck
     end
 
     def cards_in_category(category_type)
-        @cards.find_all do |card|
-            # @card = card
-            category_type = []
+        @cards.select do |card|
+    
             card.category == category_type
-            category_type << card
 
         end
 
     end
 end
-
-#require 'pry'; binding.pry

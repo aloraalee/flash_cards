@@ -56,7 +56,10 @@ end
 # Start the game
 start(round)
 
+# End the game
 puts "****** Game over! ******"
 puts "You had #{round.number_correct} correct guesses out of 4, for a total score of #{round.percent_correct}%."
-
+puts "#{card.category} - #{round.percent_correct_by_category(:Geography)} % #{turn.feedback}"
+puts "#{card.category} - #{round.percent_correct_by_category(:STEM)} % #{turn.feedback}"
+puts "#{card.category} - #{round.percent_correct_by_category(:Health)} % #{turn.feedback}"
 

@@ -1,8 +1,3 @@
-# Create some Cards
-# Put those card into a Deck
-# Create a new Round using the Deck you created
-# Start the round using a new method called start
-
 require './lib/card'
 require './lib/turn'
 require './lib/deck'
@@ -11,8 +6,8 @@ require './lib/round'
 # Create some cards
 card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
 card_2 = Card.new("The Viking spacecraft sent back to Earth photographs and reports about the surface of which planet?", "Mars", :STEM)
-card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwise from due north?", "North north west", :STEM)
-card_4 = Card.new("What country has the highest life expectancy?", "Hong Kong", :Health)
+card_3 = Card.new("How many minutes are in a full week?", "10080", :STEM)
+card_4 = Card.new("What country has the highest life expectancy?", "Hong kong", :Health)
 
 #Create a card
 card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
@@ -59,7 +54,7 @@ start(round)
 # End the game
 puts "****** Game over! ******"
 puts "You had #{round.number_correct} correct guesses out of 4, for a total score of #{round.percent_correct}%."
-puts "#{card.category} - #{round.percent_correct_by_category(:Geography)} % #{turn.feedback}"
-puts "#{card.category} - #{round.percent_correct_by_category(:STEM)} % #{turn.feedback}"
-puts "#{card.category} - #{round.percent_correct_by_category(:Health)} % #{turn.feedback}"
+puts "Geography - #{round.percent_correct_by_category(:Geography)} % #{turn.feedback}"
+puts "STEM - #{round.percent_correct_by_category(:STEM)} % #{turn.feedback}"
+puts "Health - #{round.percent_correct_by_category(:Health)} % #{turn.feedback}"
 
